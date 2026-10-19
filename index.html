@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>20/10 — Những bông hoa 10A1</title>
+<style>
+:root{--pink:#ff9ed3;--pale:#fff0fa;--purple:#29102e}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#100817;color:#fff5fc;font-family:Georgia,"Times New Roman",serif;min-height:100vh}
+.hero{position:relative;isolation:isolate;min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:clamp(18px,4vw,64px);padding:clamp(24px,5vw,72px);overflow:hidden;background:
+linear-gradient(90deg,rgba(15,5,23,.12) 0%,rgba(24,7,29,.28) 43%,rgba(25,8,34,.8) 61%,rgba(17,6,25,.83) 100%),
+url("vuon-hoa-20-10.png") center center/cover no-repeat}
+.hero:before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse at 72% 48%,transparent 0%,rgba(17,5,25,.15) 45%,rgba(8,4,15,.35) 100%)}
+.topline{position:absolute;top:24px;left:clamp(22px,4vw,60px);right:clamp(22px,4vw,60px);display:flex;justify-content:space-between;gap:16px;font:14px Arial,sans-serif;letter-spacing:.08em;color:#ffe6f6;text-shadow:0 2px 10px #160419}
+.topline span:last-child{color:#ffd3ee}
+.left-space{min-height:40vh}
+.content{max-width:600px;margin-left:auto;text-align:center;text-shadow:0 2px 12px #220821}
+.kicker{font:11px Arial,sans-serif;letter-spacing:.26em;text-transform:uppercase;color:#ffc1e4}
+h1{font-size:clamp(36px,4.5vw,68px);line-height:1.12;font-weight:normal;font-style:italic;color:#ffb8df;margin:22px 0 20px;text-shadow:0 0 22px #ff69b5a8}
+.intro{font-size:clamp(15px,1.45vw,19px);line-height:1.75;color:#fff0fa;margin:0 auto 22px;max-width:520px}
+.message{font-size:clamp(14px,1.2vw,16px);line-height:1.8;color:#fff0fa;max-width:520px;margin:0 auto}
+.message p{margin:9px 0}
+.highlight{color:#ffc3e5}
+.signature{margin:19px 0 24px;color:#ffb5dd;letter-spacing:.05em}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:1px solid #ffd6ed;border-radius:999px;padding:15px 25px;background:linear-gradient(120deg,#ff7cc2e8,#ad4ca5e8);color:white;font-size:13px;font-weight:bold;letter-spacing:.08em;cursor:pointer;box-shadow:0 0 26px #ff64b877,inset 0 1px #fff9;transition:transform .22s,box-shadow .22s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 0 38px #ff7cc2c9}
+.note{margin:25px auto 0;max-width:410px;padding:17px 22px;border:1px solid #ffd0ec70;border-radius:16px;background:linear-gradient(135deg,#5d275a99,#24102eaa);backdrop-filter:blur(9px);font-style:italic;font-size:17px;line-height:1.6;color:#ffe5f4;box-shadow:0 8px 32px #08020a55}
+.note .tiny{display:block;font-style:normal;font-size:12px;color:#ffc1e4;margin-top:8px}
+.rail{position:absolute;left:14px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:6px;padding:10px 8px;border:1px solid #ffc8e650;border-radius:18px;background:#35143c77;backdrop-filter:blur(8px)}
+.rail button{width:42px;height:42px;border:0;background:transparent;color:#ffe1f3;font-size:21px;cursor:pointer;border-radius:12px;transition:.2s}
+.rail button:hover{background:#ff9bd344;transform:scale(1.08)}
+.petal{position:fixed;z-index:3;top:-30px;width:11px;height:17px;border-radius:90% 0 90% 10%;pointer-events:none;background:linear-gradient(135deg,#fff1fa,#ff86c4 55%,#b51b6d);box-shadow:0 0 12px #ff73b977;animation:fall linear forwards}
+@keyframes fall{to{transform:translate3d(var(--drift),110vh,0) rotate(760deg);opacity:.1}}
+.spark{position:fixed;z-index:2;width:3px;height:3px;border-radius:50%;background:#fff0bd;box-shadow:0 0 12px 3px #ffb2de;pointer-events:none;animation:twinkle 2s ease-in-out infinite alternate}
+@keyframes twinkle{to{opacity:.15;transform:scale(.3)}}
+.modal{position:fixed;z-index:10;inset:0;display:grid;place-items:center;padding:18px;background:#0c0514c9;backdrop-filter:blur(12px);opacity:0;visibility:hidden;transition:.3s}
+.modal.show{opacity:1;visibility:visible}
+.card{position:relative;width:min(570px,100%);padding:35px 28px 30px;text-align:center;border:1px solid #ffd0e9a8;border-radius:24px;background:radial-gradient(ellipse at top,#64214f,#1b0b28 75%);box-shadow:0 0 55px #ff4ba855;transform:translateY(16px) scale(.97);transition:.3s}
+.show .card{transform:none}
+.card h2{font-weight:normal;font-style:italic;color:#ffc0e2;font-size:clamp(27px,5vw,38px);margin:0 0 14px}
+.card p{line-height:1.9;color:#ffedf7;font-size:16px}
+.close{position:absolute;right:12px;top:8px;background:none;border:0;color:#ffe2f3;font-size:28px;cursor:pointer}
+.gift{width:128px;height:112px;margin:22px auto;position:relative;filter:drop-shadow(0 0 16px #ff66bd88);cursor:pointer}
+.box{position:absolute;bottom:0;left:12px;width:104px;height:68px;border-radius:5px;background:linear-gradient(90deg,#b51d72,#ff91c8 48%,#cf2b82)}
+.box:after{content:"";position:absolute;left:41px;top:0;width:22px;height:100%;background:linear-gradient(90deg,#ffe4a0,#fff3c9,#edb64c)}
+.lid{position:absolute;z-index:2;left:5px;top:28px;width:120px;height:20px;border-radius:4px;background:linear-gradient(#ffc2e2,#e34b9b);transform-origin:left;transition:.65s}
+.bow{position:absolute;z-index:3;left:47px;top:0;width:35px;height:30px;border:8px solid #ffe7a5;border-radius:80% 80% 20% 80%;transform:rotate(20deg)}
+.bow:after{content:"";position:absolute;width:30px;height:25px;border:8px solid #ffe7a5;border-radius:80% 80% 80% 20%;left:12px;top:-7px;transform:rotate(50deg)}
+.gift.open .lid{transform:translate(-10px,-32px) rotate(-28deg)}
+.reveal{position:fixed;inset:0;z-index:30;display:grid;place-items:center;padding:20px;overflow:hidden;background:radial-gradient(ellipse at 50% 35%,#7a2868 0%,#301038 48%,#100717 100%);opacity:0;visibility:hidden;transition:opacity .8s,visibility .8s}
+.reveal.show{opacity:1;visibility:visible}
+.reveal:before{content:"";position:absolute;inset:0;background:url("vuon-hoa-20-10.png") center/cover;opacity:.23;filter:blur(2px)}
+.reveal-card{position:relative;width:min(720px,100%);padding:clamp(25px,5vw,54px);text-align:center;border:1px solid #ffd6edaa;border-radius:28px;background:linear-gradient(145deg,#3d1747ed,#1a0a28f2);box-shadow:0 0 100px #ff6bb655;transform:scale(.8) translateY(30px);transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+.reveal.show .reveal-card{transform:scale(1) translateY(0)}
+.reveal-title{font-size:clamp(34px,6vw,60px);font-style:italic;font-weight:normal;line-height:1.12;color:#ffc2e4;text-shadow:0 0 30px #ff69b8;margin:8px 0 20px}
+.reveal-copy{font-size:clamp(15px,2.4vw,19px);line-height:1.9;color:#fff0fa;max-width:570px;margin:0 auto}
+.reveal-rose{font-size:clamp(45px,8vw,80px);filter:drop-shadow(0 0 20px #ff5db6);animation:rosePulse 2.2s ease-in-out infinite}
+@keyframes rosePulse{50%{transform:scale(1.12) rotate(-5deg);filter:drop-shadow(0 0 36px #ff9edc)}}
+.confetti{position:absolute;top:-15px;width:8px;height:15px;border-radius:3px;animation:confettiFall 4.8s linear forwards;pointer-events:none}
+@keyframes confettiFall{to{transform:translateY(115vh) rotate(900deg);opacity:0}}
+.reveal-close{margin-top:26px}
+.footer{position:absolute;bottom:17px;left:0;right:0;text-align:center;font:10px Arial,sans-serif;letter-spacing:.2em;color:#ffe1f3b5}
+@media(max-width:850px){.hero{grid-template-columns:1fr;min-height:100svh;padding:85px 22px 55px;background:linear-gradient(180deg,rgba(14,5,22,.16),rgba(20,6,28,.66) 42%,rgba(18,5,26,.93) 100%),url("vuon-hoa-20-10.png") 35% center/cover no-repeat}.left-space{min-height:28vh}.content{margin:0 auto}.topline{font-size:11px}.rail{left:8px;top:auto;bottom:14px;transform:none;flex-direction:row;padding:5px}.rail button{width:34px;height:34px}.footer{display:none}.note{font-size:15px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<section class="hero" id="home">
+  <div class="topline"><span>♡ &nbsp; 20/10 &nbsp; ── ✧ ──</span><span>Lớp 10A1 &nbsp; ♥</span></div>
+  <nav class="rail" aria-label="Điều hướng">
+    <button title="Trang chủ" id="homeBtn">⌂</button>
+    <button title="Lời chúc" id="wishBtn">♡</button>
+    <button title="Hộp quà" id="giftBtn">♧</button>
+    <button title="Lá thư" id="letterBtn">✉</button>
+    <button title="Bật/tắt nhạc nền" id="musicBtn">♫</button>
+  </nav>
+  <div class="left-space" aria-hidden="true"></div>
+  <div class="content">
+    <div class="kicker">Một món quà nhỏ dành riêng cho 10A1</div>
+    <h1>Chúc mừng<br>Ngày Phụ nữ Việt Nam<br>20 - 10</h1>
+    <p class="intro">Gửi đến tất cả các bạn nữ lớp 10A1 — những đóa hoa rực rỡ, xinh đẹp và tuyệt vời nhất!</p>
+    <div class="message" id="mainWish">
+      <p>Cảm ơn các bạn vì đã luôn mang đến năng lượng tích cực, làm lớp học thêm ấm áp, vui vẻ và tràn đầy tiếng cười.</p>
+      <p>Chúc các bạn luôn mạnh khỏe, xinh đẹp, tự tin, hạnh phúc, luôn là chính mình và đạt được mọi ước mơ.</p>
+      <p>Dù phía trước có bao nhiêu thử thách, hãy luôn nhớ rằng các bạn xứng đáng với những điều tốt đẹp nhất!</p>
+    </div>
+    <div class="signature">♥ &nbsp; Yêu thương cả lớp 10A1 &nbsp; ♥</div>
+    <button class="btn" id="openGift">♔ &nbsp; Mở hộp thư & món quà &nbsp; ➜</button>
+    <div class="note">✿ Vì các bạn là những bông hoa<br>đẹp nhất trong vườn hoa 10A1! ♡<span class="tiny">Gửi bằng tất cả sự quý mến · 20.10</span></div>
+  </div>
+  <div class="footer">MADE WITH LOVE &nbsp; ✧ &nbsp; 10A1 &nbsp; ✧ &nbsp; 20 — 10</div>
+</section>
+<div class="modal" id="giftModal"><div class="card"><button class="close" data-close>×</button><h2>Một món quà bí mật 🎁</h2><div class="gift" id="gift"><div class="bow"></div><div class="lid"></div><div class="box"></div></div><p id="giftText">Chạm vào hộp quà để mở món quà nhỏ dành cho bạn nhé!</p><button class="btn" id="unwrap">MỞ QUÀ 💗</button></div></div>
+<div class="modal" id="letterModal"><div class="card"><button class="close" data-close>×</button><h2>Gửi tất cả các bạn nữ 10A1 💌</h2><p>Nhân ngày 20/10, chúc tất cả các bạn nữ lớp mình luôn vui vẻ, bình an và gặp thật nhiều may mắn. Chúc những bài kiểm tra đều thuận lợi, những mục tiêu đang ấp ủ sẽ dần thành hiện thực, và mỗi ngày đến lớp đều có thêm một chuyện vui để nhớ.</p><p>Mong rằng sau này, dù mỗi người có một con đường riêng, chúng ta vẫn nhớ về những năm tháng 10A1 bằng nụ cười — nhớ những lần cùng nhau học bài, cùng cười vì chuyện nhỏ xíu và cùng động viên nhau khi mệt mỏi.</p><p style="color:#ffc0e2;font-style:italic">Chúc các bạn không chỉ rực rỡ trong ngày 20/10, mà cả 364 ngày còn lại cũng luôn được trân trọng, được là chính mình và được sống những ngày thật đáng yêu. 🌷</p></div></div>
+<div class="modal" id="wishModal"><div class="card"><button class="close" data-close>×</button><h2>Một lời chúc dành cho bạn ✨</h2><p id="wishText">Chúc bạn luôn tự tin, vui vẻ và tỏa sáng theo cách riêng của mình!</p><button class="btn" id="anotherWish">Một lời chúc nữa ♡</button></div></div>
+<div class="reveal" id="finalReveal"><div class="reveal-card"><div class="reveal-rose">🌹 🌸 🌹</div><div class="kicker">Một điều muốn nói với các bạn</div><h2 class="reveal-title">Các bạn chính là<br>món quà tuyệt vời nhất!</h2><p class="reveal-copy">Gửi những cô gái của 10A1: mong mỗi ngày của các bạn đều có một lý do để mỉm cười, một người để sẻ chia và một ước mơ để bước tiếp. Đừng quên rằng các bạn đáng quý không phải vì phải hoàn hảo, mà vì mỗi người đều có nét riêng không thể thay thế. Chúc các bạn luôn được yêu thương, tỏa sáng và có thật nhiều kỷ niệm đẹp bên nhau. 💗</p><div class="signature">✧ Chúc mừng 20/10 · Thương mến, 10A1 ✧</div><button class="btn reveal-close" id="replay">♡ Xem lại món quà</button></div></div>
+<script>
+const $=id=>document.getElementById(id);
+function petals(){const p=document.createElement('i');p.className='petal';p.style.left=Math.random()*100+'vw';p.style.setProperty('--drift',(Math.random()*240-120)+'px');p.style.animationDuration=(8+Math.random()*10)+'s';p.style.opacity=.35+Math.random()*.65;document.body.appendChild(p);setTimeout(()=>p.remove(),19000)}
+for(let i=0;i<28;i++)setTimeout(petals,i*180);setInterval(petals,360);
+for(let i=0;i<36;i++){const s=document.createElement('i');s.className='spark';s.style.left=Math.random()*100+'vw';s.style.top=Math.random()*100+'vh';s.style.animationDelay=(-Math.random()*3)+'s';document.body.appendChild(s)}
+const gm=$('giftModal'),lm=$('letterModal'),wm=$('wishModal'),gift=$('gift');
+function show(m){m.classList.add('show')}function hideAll(){[gm,lm,wm].forEach(m=>m.classList.remove('show'))}
+$('openGift').onclick=()=>{show(gm);gift.classList.remove('open');$('giftText').textContent='Chạm vào hộp quà để mở món quà nhỏ dành cho bạn nhé!';$('unwrap').textContent='MỞ QUÀ 💗'};
+$('giftBtn').onclick=$('openGift').onclick;
+let unwrapped=false;
+function unwrap(){if(unwrapped){$('finalReveal').classList.add('show');return}unwrapped=true;gift.classList.add('open');$('giftText').textContent='Bạn nghe thấy tiếng lấp lánh không? Món quà này còn có một bí mật nữa…';$('unwrap').textContent='MỞ BÍ MẬT CUỐI CÙNG ✨';$('unwrap').onclick=finalSurprise;gift.onclick=finalSurprise}
+function finalSurprise(){hideAll();$('finalReveal').classList.add('show');for(let i=0;i<95;i++){setTimeout(()=>{const c=document.createElement('i');c.className='confetti';c.style.left=Math.random()*100+'vw';c.style.background=['#ff91cc','#ffe5a3','#d9a3ff','#fff0fa','#ff5f9e'][Math.floor(Math.random()*5)];c.style.animationDuration=(3+Math.random()*3)+'s';c.style.transform='rotate('+Math.random()*180+'deg)';$('finalReveal').appendChild(c);setTimeout(()=>c.remove(),6500)},i*22)}}
+gift.onclick=unwrap;$('unwrap').onclick=unwrap;
+$('replay').onclick=()=>{$('finalReveal').classList.remove('show');unwrapped=false;gift.classList.remove('open');$('giftText').textContent='Chạm vào hộp quà để mở món quà nhỏ dành cho bạn nhé!';$('unwrap').textContent='MỞ QUÀ 💗';$('unwrap').onclick=unwrap;gift.onclick=unwrap;show(gm)};
+$('letterBtn').onclick=()=>show(lm);
+const wishes=['Chúc bạn luôn tự tin, vui vẻ và tỏa sáng theo cách riêng của mình. 🌸','Chúc việc học thuận lợi, mục tiêu dần thành hiện thực và mọi nỗ lực đều được đền đáp. ✨','Chúc bạn luôn có những người bạn chân thành, những ngày bình yên và thật nhiều điều để mỉm cười. 💗','Mong bạn luôn được trân trọng, được lắng nghe và không bao giờ quên giá trị của bản thân. 🌷','Chúc tuổi học trò của bạn có thật nhiều kỷ niệm đẹp cùng tập thể 10A1. 💌'];let wi=0;
+function nextWish(){ $('wishText').textContent=wishes[wi];wi=(wi+1)%wishes.length }
+$('wishBtn').onclick=()=>{nextWish();show(wm)};$('anotherWish').onclick=nextWish;
+$('homeBtn').onclick=()=>window.scrollTo({top:0,behavior:'smooth'});
+$('musicBtn').onclick=()=>{const note=document.createElement('div');note.textContent='Trang hiện chưa kèm nhạc nền tự phát nhé 💗';note.style='position:fixed;z-index:50;bottom:25px;left:50%;transform:translateX(-50%);padding:13px 18px;border-radius:18px;background:#4b1b50;color:#fff;border:1px solid #ffb9df';document.body.appendChild(note);setTimeout(()=>note.remove(),2400)};
+document.querySelectorAll('[data-close]').forEach(b=>b.onclick=hideAll);
+[gm,lm,wm].forEach(m=>m.addEventListener('click',e=>{if(e.target===m)hideAll()}));
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){hideAll();$('finalReveal').classList.remove('show')}});
+</script>
+</body>
+</html>
